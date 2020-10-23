@@ -5,10 +5,13 @@
 function Drawing(){
     this.shapes = [];
 
-    Drawing.prototype.getShapes = function() {
+    this.getForms = function() {
         return this.shapes;
-    }
+    }.bind(this);
 
+    this.addShape = function(shape) {
+        this.shapes.push(shape);
+    }.bind(this);
 }
 
 function Shape(color, thickness){
@@ -23,7 +26,8 @@ function Rectangle(startx, starty, length, width, thickness, color){
     this.startx = startx;
     this.starty = starty;
     this.length = length;
-    this.width = width;    
+    this.width = width;
+    
 
 }
 Rectangle.prototype = new Shape();

@@ -19,7 +19,7 @@ function DnD(canvas, interactor) {
       this.finalX = res.x;
       this.finalY = res.y;
       this.mousePressed = false;
-      console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY);
+      //console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY);
       interactor.onInteractionEnd(this);
     } 
   }
@@ -32,7 +32,7 @@ function DnD(canvas, interactor) {
 
     this.mousePressed = true;
 
-    console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY)
+    //console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY)
 
     interactor.onInteractionStart(this);
   }
@@ -42,7 +42,7 @@ function DnD(canvas, interactor) {
       res = getMousePosition(canvas, evt);
       this.finalX = res.x;
       this.finalY = res.y;
-      console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY)
+      //console.log(this.initialX + " " + this.initialY + " " +  this.finalX + " " + this.finalY)
 
       interactor.onInteractionUpdate(this);
     }
